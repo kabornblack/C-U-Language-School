@@ -1,19 +1,26 @@
-import Navbar from "@/components/Navbar/Navbar";
-import { Button } from "@/components/ui/button";
+import React from "react";
+import Hero from "@/components/Hero";
+import Image from "next/image";
+import Learning from "@/components/Learning";
+import CulturalDiversity from "@/components/CulturalDiversity";
+import LearningStyle from "@/components/LearningStyle";
 
-
-
-export default function Home () {
-
+export default function Home() {
   return (
-    <>
-    <div>
-      <Navbar/>
-      <main className="container mx-auto p-4 " >
-
-      </main>
-    </div>
-    </>
-  )
-
+    <main className="h-auto min-w-screen bg-slate-100 overflow-x-hidden">
+      <section className="mx-auto">
+        <Hero />
+      </section>
+      <section>
+        <Learning />
+      </section>
+      <section>
+        <LearningStyle />
+      </section>
+      <section>
+        <CulturalDiversity />
+      </section>
+      <section></section>
+    </main>
+  );
 }

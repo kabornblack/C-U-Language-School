@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -18,13 +18,19 @@ const config = {
       },
     },
     extend: {
-      
+      width: {
+        "7xl": "80rem",
+        "6xl": "72rem",
+      },
+      backgroundImage: {
+        paralex: 'url("/together.jpg")',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
-        
+
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
@@ -37,6 +43,14 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
+
+// backgroundImage: {
+//       'paralex': 'radial-gradient(var
+//       (--tw-gradient-stops))',
+//       'gradient-conic':
+//       "conic-gradient(from 180deg at 50% 50%, var
+//       (--tw-gradient-stops))',
+//     }
