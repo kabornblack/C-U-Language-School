@@ -22,8 +22,17 @@ const config = {
         "7xl": "80rem",
         "6xl": "72rem",
       },
+      fontFamily: {
+        rethink: ['"Rethink Sans"', "sans-serif"],
+      },
+      fontSize: {
+        "hero-size": "var(--sds-typography-title-hero-size)",
+      },
+      letterSpacing: {
+        "-tight": "-2.16px",
+      },
       backgroundImage: {
-        paralex: 'url("/together.jpg")',
+        paralex: 'url("/hero.jpg")',
       },
       keyframes: {
         "accordion-down": {

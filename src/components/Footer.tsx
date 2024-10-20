@@ -79,7 +79,8 @@ function Footer() {
       </div>
       <div className="flex justify-between items-center px-5 md:px-20 py-10">
         <p className="text-xs">
-          Copyright {currentYear} CU International Language School
+          Copyright <span className="text-blue-900 ">© {currentYear}</span> C-U
+          International Language School
         </p>
         <div className="flex items-center justify-center gap-5 md:gap-10">
           <a

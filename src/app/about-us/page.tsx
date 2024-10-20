@@ -4,7 +4,7 @@ import React from "react";
 
 function page() {
   return (
-    <div className="pt-20 md:pt-14 w-full h-auto">
+    <div className="w-full h-auto">
       <About />
       <Contact />
     </div>
@@ -12,3 +12,4 @@ function page() {
 }
 
 export default page;
+

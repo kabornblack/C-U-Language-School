@@ -60,17 +60,17 @@ function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-slate-50 text-black shadow fixed top-0 w-full">
+    <header className="bg-slate-50 text-black shadow w-full top-0 z-50 font-rethink">
       <nav className="container min-h-16 flex items-center justify-between max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
         {/*Left Menu Logo&text */}
-        <div className="flex flex-col md:flex-row items-center space-x-2 w-1/4 shrink-0">
+        <div className="flex lg:flex-1">
           <Link href="/">
             <Image
               src="/cuLogo.png"
               alt="CULogo"
               width={1000}
               height={1000}
-              className="w-28 md:w-52 h-5 md:h-12"
+              className="w-auto h-12"
             />
           </Link>
         </div>
@@ -87,19 +87,19 @@ function Navbar() {
           </button>
         </div>
 
-        <PopoverGroup className="hidden lg:flex items-center space-x-1 ">
-          <DropdownSelector type="courses" />
+        <PopoverGroup className="hidden lg:flex items-center lg:gap-x-5 justify-center">
+          {/* <DropdownSelector type="courses" /> */}
           <DropdownSelector type="languages" />
 
           <Link
             href="/about-us"
-            className="text-black hover:text-white py-2 px-3 hover:bg-blue-900 hover:rounded-md active:text-blue-900"
+            className="text-black hover:text-[#FF509B] py-2 px-3 "
           >
             About Us
           </Link>
           <Link
             href="/how-it-works"
-            className="text-black hover:text-white py-2 px-3 hover:bg-blue-900 hover:rounded-md"
+            className="text-black hover:text-[#FF509B] py-2 px-3 "
           >
             How it works
           </Link>
@@ -110,26 +110,17 @@ function Navbar() {
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
-          <DialogPanel className="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-blue-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-blue-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="relative flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <p className="sr-only text-white">C/U International School</p>
-                <div className="absolute flex-shrink-0">
-                  <Link href="/">
-                    <Image
-                      src="/cuLogo.png"
-                      alt="CULogo"
-                      width={1000}
-                      height={1000}
-                      className="w-52  h-12"
-                    />
-                  </Link>
-                </div>
+                <h1 className="text-xl text-white font-bold leading-2">
+                  C-U International School
+                </h1>
 
-                <div className="mt-14 flow-root">
+                <div className="mt-8 flow-root">
                   <div className="-my-6 divide-y divide-gray-500/10">
                     <div className="space-y-2 py-6">
-                      <Disclosure as="div" className="-mx-3">
+                      {/* <Disclosure as="div" className="-mx-3">
                         {({ open }) => (
                           <>
                             <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-thin hover:font-medium leading-2 text-slate-300 hover:bg-blue-800">
@@ -156,7 +147,7 @@ function Navbar() {
                             </DisclosurePanel>
                           </>
                         )}
-                      </Disclosure>
+                      </Disclosure> */}
                       <Disclosure as="div" className="-mx-3">
                         {({ open }) => (
                           <>
@@ -208,26 +199,24 @@ function Navbar() {
               >
                 <span className="sr-only ">Close menu</span>
                 <XMarkIcon
-                  className="fixed top-4 right-4 h-6 w-6  md:right-1/2 "
+                  className="fixed top-4 right-4 h-6 w-6 "
                   aria-hidden="true"
                 />
               </button>
             </div>
           </DialogPanel>
         </Dialog>
-
         {/* Right Menu */}
-
-        <div className="flex items-center space-x-2 w-1/4 justify-end">
+        <div className="hidden sm:hidden md:hidden lg:flex lg:flex-row items-center space-x-2 w-1/4 justify-end ml-20">
           <div className="h-9 w-px mr-2 bg-slate-300" />
-          <div className="flex space-x-2 group hover:text-blue-900">
+          <div className="flex space-x-2 group   ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              className="size-6 shrink-0 hidden sm:block animate-spin duration-10000 group-hover:animate-none"
+              className="size-6 shrink-0 hidden lg:block animate-spin duration-10000 group-hover:text-[#FF509B] group-hover:animate-none"
             >
               <path
                 stroke-linecap="round"
@@ -236,14 +225,16 @@ function Navbar() {
               />
             </svg>
 
-            <select className="bg-transparent w-24">
+            <select className="bg-transparent w-24 hidden lg:block hover:text-[#FF509B]  border border-spacing-2 px-1">
               <option value="en">English</option>
               <option value="es">Spanish</option>
             </select>
           </div>
-          <Button className="bg-blue-900 px-8 whitespace-nowrap hidden md:block">
-            Get started
-          </Button>
+          <Link href="/getstarted" passHref>
+            <Button className="bg-blue-950 hover:bg-blue-900 text-slate-100 hover:text-white active:bg-blue-700 px-8">
+              Get started
+            </Button>
+          </Link>
         </div>
       </nav>
     </header>

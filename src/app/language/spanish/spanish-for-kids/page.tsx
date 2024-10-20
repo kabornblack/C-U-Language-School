@@ -1,9 +1,11 @@
+import EnglishLearningForKids from "@/components/EnglishLearningForKids";
+import SpanishLearningForKids from "@/components/SpanishLearningForKids";
 import React from "react";
 
 function page() {
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <h2>Spanish for Kids page goes here </h2>
+      <SpanishLearningForKids />
     </div>
   );
 }

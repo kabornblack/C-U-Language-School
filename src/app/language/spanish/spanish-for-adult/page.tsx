@@ -1,9 +1,10 @@
+import SpanishLearningForAdult from "@/components/SpanishLearningForAdult";
 import React from "react";
 
 function page() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <h2>Spanish for Adult page goes here </h2>
+    <div className="flex justify-center items-center w-full h-auto">
+      <SpanishLearningForAdult />
     </div>
   );
 }

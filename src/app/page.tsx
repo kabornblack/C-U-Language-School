@@ -4,11 +4,13 @@ import Image from "next/image";
 import Learning from "@/components/Learning";
 import CulturalDiversity from "@/components/CulturalDiversity";
 import LearningStyle from "@/components/LearningStyle";
+import EnjoyableLearning from "@/components/EnjoyableLearning";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function Home() {
   return (
-    <main className="h-auto min-w-screen bg-slate-100 overflow-x-hidden">
-      <section className="mx-auto">
+    <main className="h-auto w-full bg-slate-100 -pt-2">
+      <section className="">
         <Hero />
       </section>
       <section>
@@ -20,6 +22,10 @@ export default function Home() {
       <section>
         <CulturalDiversity />
       </section>
+      <section>
+        <EnjoyableLearning />
+      </section>
+      <CookieConsent />
       <section></section>
     </main>
   );
