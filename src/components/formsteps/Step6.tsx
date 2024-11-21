@@ -2,7 +2,7 @@ import React from "react";
 
 function Step6() {
   return (
-    <div className="flex flex-col space-y-2  font-sans font-medium">
+    <div className="flex flex-col space-y-2 justify-center items-center font-sans font-medium">
       <h2 className="text-center text-2xl md:text-4xl text-blue-950 pb-10 font-bold">
         {`What's your name?`}
       </h2>
@@ -12,7 +12,7 @@ function Step6() {
           type="text"
           required
           placeholder="👤 First name"
-          className="h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3"
+          className="h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pl-5"
         />
       </label>
 
@@ -21,7 +21,7 @@ function Step6() {
           type="text"
           required
           placeholder="👤 Last name"
-          className="h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3"
+          className="h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pl-5"
         />
       </label>
     </div>

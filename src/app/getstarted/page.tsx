@@ -109,7 +109,7 @@ function Page() {
             {!isFirstStep && (
               <a
                 onClick={back}
-                className="cursor-pointer text-blue-800 text-sm font-bold p-2"
+                className="cursor-pointer text-blue-950 text-sm font-bold p-2 w-28"
               >
                 Go back
               </a>
@@ -119,7 +119,7 @@ function Page() {
               min="1"
               max={steps.length}
               value={currentStepIndex + 1}
-              className="h-2 rounded-lg"
+              className="w-full h-2 rounded-lg"
             />
           </div>
           <div className="my-10">{step}</div>

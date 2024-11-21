@@ -29,21 +29,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import CourseSelector from "../Selectors";
 import DropdownSelector from "../Selectors";
-
-const courses = [
-  {
-    name: "Individual",
-    href: "/courses/individual",
-  },
-  {
-    name: "Group",
-    href: "/courses/group",
-  },
-  {
-    name: "Businesses",
-    href: "/courses/business",
-  },
-];
+import { usePathname } from "next/navigation";
 
 const languages = [
   {
@@ -58,6 +44,11 @@ const languages = [
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const navItems = [
+    { page: "About Us", path: "/about-us" },
+    { page: "How it works", path: "/how-it-works" },
+  ];
 
   return (
     <header className="bg-slate-50 text-black shadow w-full top-0 z-50 font-rethink">
@@ -88,21 +79,21 @@ function Navbar() {
         </div>
 
         <PopoverGroup className="hidden lg:flex items-center lg:gap-x-5 justify-center">
-          {/* <DropdownSelector type="courses" /> */}
           <DropdownSelector type="languages" />
 
-          <Link
-            href="/about-us"
-            className="text-black hover:text-[#FF509B] py-2 px-3 "
-          >
-            About Us
-          </Link>
-          <Link
-            href="/how-it-works"
-            className="text-black hover:text-[#FF509B] py-2 px-3 "
-          >
-            How it works
-          </Link>
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.path}
+              className={`py-2 px-3 transition duration-200 ${
+                pathname === item.path
+                  ? "font-bold text-[#FF509B] hover:text-[#FF509B]"
+                  : "text-primary hover:text-[#FF509B]"
+              }`}
+            >
+              {item.page}
+            </Link>
+          ))}
         </PopoverGroup>
         <Dialog
           as="div"
@@ -120,34 +111,6 @@ function Navbar() {
                 <div className="mt-8 flow-root">
                   <div className="-my-6 divide-y divide-gray-500/10">
                     <div className="space-y-2 py-6">
-                      {/* <Disclosure as="div" className="-mx-3">
-                        {({ open }) => (
-                          <>
-                            <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-thin hover:font-medium leading-2 text-slate-300 hover:bg-blue-800">
-                              Courses
-                              <ChevronDownIcon
-                                className={cn(
-                                  open ? "rotate-180" : "",
-                                  "h-5 w-5 flex-none"
-                                )}
-                                aria-hidden="true"
-                              />
-                            </DisclosureButton>
-                            <DisclosurePanel className="mt-2 space-y-1">
-                              {[...courses].map((item) => (
-                                <DisclosureButton
-                                  key={item.name}
-                                  as="a"
-                                  href={item.href}
-                                  className="block rounded-lg py-2 pl-10 pr-3 text-sm font-semibold leading-7 text-slate-300 hover:bg-blue-800"
-                                >
-                                  {item.name}
-                                </DisclosureButton>
-                              ))}
-                            </DisclosurePanel>
-                          </>
-                        )}
-                      </Disclosure> */}
                       <Disclosure as="div" className="-mx-3">
                         {({ open }) => (
                           <>
@@ -228,6 +191,8 @@ function Navbar() {
             <select className="bg-transparent w-24 hidden lg:block hover:text-[#FF509B]  border border-spacing-2 px-1">
               <option value="en">English</option>
               <option value="es">Spanish</option>
+              <option value="et">Estonian</option>
+              <option value="ru">Russian</option>
             </select>
           </div>
           <Link href="/getstarted" passHref>

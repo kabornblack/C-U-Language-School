@@ -19,7 +19,7 @@ function UserInput() {
   const [isSelected, setIsSelected] = useState(false);
 
   return (
-    <div className="flex bg-slate-100 h-20 w-[546px] justify-center items-center space-x-3 pr-2 text-sm rounded-md">
+    <div className="hidden md:flex bg-slate-100 h-20 w-[546px] justify-center items-center space-x-3 pr-2 text-sm rounded-md">
       <p>I am</p>
       {/* Person Selector */}
       <Listbox
@@ -39,7 +39,7 @@ function UserInput() {
             {/* 'Select' shows when nothing is selected */}
             <ChevronDownIcon className="ml-2 w-4 h-4" />
           </ListboxButton>
-          <ListboxOptions className="absolute w-24 bg-white border border-gray-100 text-sm rounded-none z-10">
+          <ListboxOptions className="absolute w-24 bg-white text-sm rounded-none z-10">
             {personOptions.map((option) => (
               <ListboxOption
                 key={option}
@@ -72,7 +72,7 @@ function UserInput() {
             {selectedStudy || "Select"}{" "}
             <ChevronDownIcon className="ml-2 w-4 h-4" />
           </ListboxButton>
-          <ListboxOptions className="absolute w-28 bg-white border border-gray-100 text-sm rounded-none z-10">
+          <ListboxOptions className="absolute w-28 bg-white text-sm rounded-none z-10">
             {studyOptions.map((option) => (
               <ListboxOption
                 key={option}

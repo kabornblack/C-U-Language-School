@@ -16,11 +16,11 @@ function EnjoyableLearning() {
       />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center space-y-16">
-        <h1 className="text-4xl text-white font-bold text-center">
+        <h1 className="text-4xl text-white font-bold text-center px-2">
           Enjoyable and Engaging Learning Experience
         </h1>
-        <div className="flex spave-x-1 md:space-x-10">
-          <div className="flex flex-col justify-center items-center h-36 w-36 bg-pink-500 p-4 rounded-xl shadow-md transform rotate-[-10deg] hover:scale-105 transition-transform duration-100 ease-in-out">
+        <div className="flex space-x-2 md:space-x-10">
+          <div className="hidden md:block flex-col justify-center items-center h-36 w-36 bg-pink-500 p-4 rounded-xl shadow-md transform rotate-[-10deg] hover:scale-105 transition-transform duration-100 ease-in-out">
             <div className="flex justify-center items-center mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ function EnjoyableLearning() {
               <br /> Application
             </h3>
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 bg-pink-500 p-4 rounded-xl shadow-md transform rotate-[10deg] hover:scale-95 transition-transform duration-100 ease-in-out">
+          <div className="flex flex-col justify-center items-center h-36 w-36 bg-pink-500 p-4 rounded-xl shadow-md transform md:rotate-[10deg] hover:scale-95 transition-transform duration-100 ease-in-out">
             <div className="flex justify-center items-center mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ function EnjoyableLearning() {
               <br /> Learning
             </h3>
           </div>
-          <div className="flex flex-col justify-center items-center h-36 w-36 bg-blue-500 p-4 rounded-xl shadow-md hover:scale-95 transition-transform duration-100 ease-in-out">
+          <div className="hidden md:block flex-col justify-center items-center h-36 w-36 bg-blue-500 p-4 rounded-xl shadow-md hover:scale-95 transition-transform duration-100 ease-in-out">
             <div className="flex justify-center items-center mb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

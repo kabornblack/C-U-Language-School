@@ -25,7 +25,7 @@ export default function Home() {
       <section>
         <EnjoyableLearning />
       </section>
-      <CookieConsent />
+      {/* <CookieConsent /> */}
       <section></section>
     </main>
   );

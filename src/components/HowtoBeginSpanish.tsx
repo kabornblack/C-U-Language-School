@@ -3,115 +3,89 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import Card from "./Card";
+
+const spanishCardData = [
+  {
+    id: 1,
+    title: "Beginner Spanish",
+    image: "/spanishbeginner.png",
+    alt: "Beginner Spanish",
+    content: [
+      "Build Your Foundation with Fun and Excitement!",
+      "Our beginner program focuses on essential vocabulary, basic grammar, and everyday communication in a lively atmosphere.",
+      "Students participate in interactive activities like role-plays, games, and real-life scenarios that make learning enjoyable.",
+      "This approach boosts confidence and empowers learners to navigate daily interactions with ease.",
+    ],
+    delay: 0.5,
+    expandable: true,
+  },
+  {
+    id: 2,
+    title: "Intermediate Spanish",
+    image: "/spanishintermediate.png",
+    alt: "Intermediate Spanish",
+    content: [
+      "Expand Your Horizons with Engagement in Learning!",
+      "In the intermediate program, students enhance their vocabulary and grammar while diving into stimulating discussions.",
+      "This level is all about fun—engaging conversations, creative writing exercises, and cultural explorations keep the learning dynamic.",
+      "By incorporating idiomatic expressions and relatable topics, we enrich learners' understanding while making communication enjoyable.",
+    ],
+    delay: 1,
+    expandable: true,
+  },
+  {
+    id: 3,
+    title: "Advanced Spanish",
+    image: "/spanishadvance.png",
+    alt: "Advanced Spanish",
+    content: [
+      "Achieve Fluency and Mastery with Excitement!",
+      "The advanced program is for those ready to refine their skills while having a blast.",
+      "Students engage in high-level discussions, debates, and presentations that challenge their thinking and public speaking abilities all in a supportive environment.",
+      "Fun writing workshops and specialized vocabulary exploration related to personal interests make mastering English an exhilarating experience.",
+    ],
+    delay: 1.5,
+    expandable: true,
+  },
+];
 
 function HowtoBeginSpanish() {
   return (
-    <div className=" bg-slate-100 w-full h-auto py-20">
+    <div className="bg-slate-100 w-full h-auto py-20">
       <div className="flex flex-col justify-center items-center h-auto w-full py-10">
-        <h2 className="text-3xl font-bold text-center ">
+        <h2 className="text-3xl font-bold text-center">
           How would you like to begin?
         </h2>
       </div>
-      {/* <div className="flex flex-col justify-center items-center md:flex-row w-full"> */}
-      <div className="flex flex-col gap-5 md:gap-2 lg:gap-5 pt-4 px-4 md:justify-center items-center md:flex-row">
-        <motion.div
-          initial={{
-            y: 100,
-            scale: 1,
-            opacity: 0,
-          }}
-          whileInView={{ y: 0, scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className=""
-        >
-          <div className="w-72 md:w-60 lg:w-80 bg-white rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Image
-              src="/spanishbeginner.png"
-              alt="Spanish beginner"
-              width={1000}
-              height={1000}
-              priority
-              className="h-40 w-full rounded-t-sm object-cover"
-            />
-            <div className="p-4 space-y-4 pb-5 font-rethink">
-              <h4 className="text-lg font-semibold">Beginner Spanish</h4>
-              <p className="text-sm font-rethink">
-                Connect with a diverse community of learners and native speakers
-                from around the world through interactive forums, language
-                exchange programs, and virtual events.
-              </p>
-              <Button className="w-1/2 py-1 bg-blue-950 hover:bg-blue-700 active:bg-blue-600 my-5">
-                Course details
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{
-            y: 100,
-            scale: 1,
-            opacity: 0,
-          }}
-          whileInView={{ y: 0, scale: 1, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className=" shrink-0 hover:scale-105 transition-transform duration-100 ease-in-out"
-        >
-          <div className="w-72 md:w-60 lg:w-80 bg-white rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Image
-              src="/spanishintermediate.png"
-              alt="Group Learning"
-              width={1000}
-              height={1000}
-              className="h-40 w-full rounded-t-sm object-cover"
-            />
-            <div className="p-4 space-y-4 pb-5">
-              <h4 className="text-lg font-semibold">Intermediate Spanish</h4>
-              <p className="text-sm font-rethink">
-                Connect with a diverse community of learners and native speakers
-                from around the world through interactive forums, language
-                exchange programs, and virtual events.
-              </p>
-              <Button className="w-1/2 py-1 bg-blue-950 hover:bg-blue-700 active:bg-blue-600 my-5">
-                Course details
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{
-            y: 100,
-            scale: 1,
-            opacity: 0,
-          }}
-          whileInView={{ y: 0, scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className=" shrink-0 hover:scale-105 transition-transform duration-100 ease-in-out"
-        >
-          <div className="w-72 md:w-60 lg:w-80 bg-white rounded-sm shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Image
-              src="/spanishadvance.png"
-              alt="Business English"
-              width={1000}
-              height={1000}
-              className="h-40 w-full rounded-t-sm object-cover"
-            />
-            <div className="p-4 space-y-4 pb-5">
-              <h4 className="text-lg font-semibold">Advanced Spanish</h4>
-              <p className="text-sm font-rethink">
-                Connect with a diverse community of learners and native speakers
-                from around the world through interactive forums, language
-                exchange programs, and virtual events.
-              </p>
-              <Button className="w-1/2 py-1 bg-blue-950 hover:bg-blue-700 active:bg-blue-600 my-5">
-                Course details
-              </Button>
-            </div>
-          </div>
-        </motion.div>
+
+      <div className="flex justify-center bg-slate-100 max-w-6xl shrink-0 mx-auto px-4 pb-20">
+        <div className="flex flex-col lg:flex-row gap-8 justify-center text-black text-base">
+          {spanishCardData.map((card) => (
+            <motion.div
+              key={card.id}
+              initial={{ y: 50, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 1, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: card.delay,
+                opacity: { duration: 1 },
+                scale: { duration: 0.8 },
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full"
+            >
+              <Card {...card} />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
-    // </div>
   );
 }
 

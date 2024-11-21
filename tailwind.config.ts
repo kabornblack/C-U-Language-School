@@ -21,6 +21,9 @@ const config = {
       width: {
         "7xl": "80rem",
         "6xl": "72rem",
+        "5xl": "60rem",
+        "4xl": "45rem",
+        "3xl": "30rem",
       },
       fontFamily: {
         rethink: ['"Rethink Sans"', "sans-serif"],

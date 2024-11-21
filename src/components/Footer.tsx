@@ -41,6 +41,14 @@ function Footer() {
             <p className="font-light text-sm hover:underline cursor-pointer">
               About Us
             </p>
+            <Link
+              href="/privacy-policy"
+              className="font-light text-sm hover:underline cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </Link>
           </div>
           <div className="hover:space-y-0.5">
             <h4 className="text-blue-900 font-semibold">Language</h4>
@@ -68,9 +76,6 @@ function Footer() {
           </div>
           <div className="hover:space-y-2">
             <h4 className="text-blue-900 font-semibold">Support</h4>
-            <p className="font-light text-sm hover:underline cursor-pointer">
-              FAQ
-            </p>
             <p className="font-light text-sm hover:underline cursor-pointer">
               Contact us
             </p>

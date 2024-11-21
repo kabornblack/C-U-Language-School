@@ -29,8 +29,8 @@ function Step2({ onLanguageSelect, language, next, updateFields }: Step2Props) {
   };
 
   return (
-    <div className="flex flex-col space-y-2 font-sans font-medium">
-      <h2 className="text-center text-2xl md:text-4xl text-blue-950 pb-10 font-bold">
+    <div className="flex flex-col space-y-2 justify-center items-center font-sans font-medium">
+      <h2 className="text-center text-2xl md:text-3xl text-blue-950 pb-10 font-bold">
         What language do you want to <br></br>learn?
       </h2>
 
@@ -45,7 +45,7 @@ function Step2({ onLanguageSelect, language, next, updateFields }: Step2Props) {
       />
       <label
         htmlFor="personal_growth"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         English Language
       </label>
@@ -61,7 +61,7 @@ function Step2({ onLanguageSelect, language, next, updateFields }: Step2Props) {
       />
       <label
         htmlFor="other"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         Spanish Language
       </label>

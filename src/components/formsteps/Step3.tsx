@@ -11,11 +11,12 @@ function Step3({ selectedLanguage, onReasonSelect }: Step3Props) {
   };
 
   return (
-    <div className="flex flex-col space-y-2  font-sans font-medium">
-      <h2 className="text-center text-2xl md:text-4xl text-blue-950 pb-10 font-bold">
+    <div className="flex flex-col space-y-2 justify-center items-center font-sans font-medium">
+      <h2 className="text-center text-2xl md:text-3xl text-blue-950 pb-10 font-bold">
         Why do you want to learn <br></br>
         {selectedLanguage ? `${selectedLanguage}` : "(Select a language)"}
       </h2>
+
       <input
         type="radio"
         name="reason"
@@ -27,7 +28,7 @@ function Step3({ selectedLanguage, onReasonSelect }: Step3Props) {
       />
       <label
         htmlFor="career"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         To master the language / become fluent
       </label>
@@ -43,7 +44,7 @@ function Step3({ selectedLanguage, onReasonSelect }: Step3Props) {
       />
       <label
         htmlFor="travel"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900  rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         To become conversational
       </label>
@@ -59,7 +60,7 @@ function Step3({ selectedLanguage, onReasonSelect }: Step3Props) {
       />
       <label
         htmlFor="study"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         To get by or learn the basics
       </label>
@@ -75,7 +76,7 @@ function Step3({ selectedLanguage, onReasonSelect }: Step3Props) {
       />
       <label
         htmlFor="personal_growth"
-        className="cursor-pointer h-16 w-64 md:w-[550px] text-gray-700 border-gray-400 border-2 rounded pl-3 pt-4 transition-colors duration-200 ease-in-out"
+        className="cursor-pointer text-center h-10 w-72 md:w-[350px] text-white bg-blue-900 rounded-full pt-2 transition-colors duration-200 ease-in-out"
       >
         Ask me again later
       </label>

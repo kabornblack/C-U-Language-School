@@ -23,10 +23,10 @@ function Page() {
             In-person Business English Language
           </h2>
           <p className="text-sm font-light">
-            Our courses are designed for adults who want to learn how to
+            Our courses are designed for students who want to learn how to
             communicate effectively in their chosen language. Whether you want
             to travel the world, communicate with friends and family, or advance
-            in your career — foreign language classes allow you to experience a
+            in your career. Foreign language classes allow you to experience a
             sense of achievement that comes with challenging yourself.
           </p>
           <p className="text-sm font-light">
@@ -42,10 +42,10 @@ function Page() {
             Online Business English Language
           </h2>
           <p className="text-sm font-light">
-            Our courses are designed for adults who want to learn how to
+            Our courses are designed for students who want to learn how to
             communicate effectively in their chosen language. Whether you want
             to travel the world, communicate with friends and family, or advance
-            in your career — foreign language classes allow you to experience a
+            in your career. Foreign language classes allow you to experience a
             sense of achievement that comes with challenging yourself.
           </p>
           <p className="text-sm font-light">
